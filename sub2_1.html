@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="H6VrNCQV_FasPUPBicvcr6rj160agELzS_xKc5mJQeM">
+<title>tabmenu | Hyunjin study</title>
+<link rel="stylesheet" href="/css/reset.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="/css/main.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header id="header"></header>
+	<div id="container">
+		<div class="aside_wrap"><aside id="aside"></aside></div>
+		<div id="content">
+			<h2>tabmenu</h2>
+			<h3>속성값 이용</h3>
+			<pre>
+				<code class="html">&lt;ul class="tabmenu"&gt;
+	&lt;li data="tab1"&gt;content&lt;/li&gt;
+	&lt;li data="tab2"&gt;content&lt;/li&gt;
+	&lt;li data="tab3"&gt;content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabcontent"&gt;
+	&lt;div id="tab1"&gt;content&lt;/div&gt;
+	&lt;div id="tab2"&gt;content&lt;/div&gt;
+	&lt;div id="tab3"&gt;content&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function tabmenu(tab, content){
+	$(tab).first().addClass("on");
+	$(content).hide().first().show();
+	
+	$(tab).click(function(){
+		$(tab).removeClass("on");
+		$(this).addClass("on");
+
+		var tabData = $(this).attr("data");
+		$(content).hide();
+		$("#" + tabData).show();
+	})
+}
+$(function(){
+	tabmenu(".tabmenu li", ".tabcontent div");
+})
+&lt;/script&gt;</code>
+			</pre>
+			<p>서치해보면 대부분 이렇게 element에 속성을 넣고 값이 같으면 불러오는 방식을 이용한다.</p>
+			<h3>.index() 이용</h3>
+			<pre>
+				<code class="html">&lt;ul class="tabmenu"&gt;
+	&lt;li&gt;content&lt;/li&gt;
+	&lt;li&gt;content&lt;/li&gt;
+	&lt;li&gt;content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabcontent"&gt;content&lt;/div&gt;
+&lt;div class="tabcontent"&gt;content&lt;/div&gt;
+&lt;div class="tabcontent"&gt;content&lt;/div&gt;
+&lt;script&gt;
+function tabmenu(tab, content){
+	$(tab).eq(0).addClass("on");
+	$(content).hide().eq(0).show();
+	
+	$(tab).click(function(){
+		$(tab).removeClass("on");
+		$(this).addClass("on");
+
+		var contentIndex = $(this).index();
+		$(content).hide();
+		$(content).eq(contentIndex).show();
+	})
+}
+$(function(){
+	tabmenu(".tabmenu li", "tabcontent");
+})
+&lt;/script&gt;</code>
+			</pre>
+			<p>.index()를 이용하면 element에 속성을 넣지 않아도 될 것 같아서 만들었다. 나는 이 방법을 자주 사용한다.</p>
+			<small>2020-05-16</small>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/script/main.js"></script>
+</body>
+</html>

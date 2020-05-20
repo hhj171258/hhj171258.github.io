@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="H6VrNCQV_FasPUPBicvcr6rj160agELzS_xKc5mJQeM">
+<title>말줄임 표시 만들기 | Hyunjin study</title>
+<link rel="stylesheet" href="/css/reset.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="/css/main.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header id="header"></header>
+	<div id="container">
+		<div class="aside_wrap"><aside id="aside"></aside></div>
+		<div id="content">
+			<h2>말줄임 표시 만들기</h2>
+			<h3>1줄</h3>
+			<pre>
+				<code class="css">.your-class{
+	overflow: hidden;
+	text-overflow: ellepsis;
+	white-space: nowrap
+}</code>
+			</pre>
+			<h3>2줄 이상</h3>
+			<pre>
+				<code class="css">.your-class{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: [number];
+	-webkit-box-orient: vertical;
+	height: [height];
+	text-overflow: ellepsis;
+}</code>
+			</pre>
+			<small>2020-05-16</small>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/script/main.js"></script>
+</body>
+</html>

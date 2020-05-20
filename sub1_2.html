@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="H6VrNCQV_FasPUPBicvcr6rj160agELzS_xKc5mJQeM">
+<title>fadeIn, fadeOut 배너 | Hyunjin study</title>
+<link rel="stylesheet" href="/css/reset.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="/css/main.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header id="header"></header>
+	<div id="container">
+		<div class="aside_wrap"><aside id="aside"></aside></div>
+		<div id="content">
+			<h2>fadeIn, fadeOut 배너</h2>
+			<h3>CSS만을 이용 fadeIn, fadeOut 배너</h3>
+			<pre>
+				<code class="html">&lt;div class="wrap"&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;				
+&lt;/div&gt;</code>
+			</pre>
+			<pre>
+				<code class="css">div:not(.wrap){position: absolute;left: 0;top: 0;width: 100%; animation: silde 18s infinite;}
+div:nth-child(1){background-image: url("[url]"); opacity: 1;}
+div:nth-child(2){background-image: url("[url]"); animation-delay: 6s; opacity: 0;}
+div:nth-child(3){background-image: url("[url]"); animation-delay: 12s; opacity: 0;}
+
+@keyframes slide{
+	0% {opacity: 0;}
+	11.11% {opacity: 1;}
+	33.33% {opacity: 1;}
+	44.44% {opacity: 0;}
+	100% {opacity: 0;}
+}</code>
+			</pre>
+			<p>Jonathan Snook의 <a href="https://snook.ca/archives/html_and_css/simplest-css-slideshow" target="_blank" title="새창열림">Simplest CSS Slideshow</a>를 이용했다.</p>
+			<small>2020-05-11</small>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/script/main.js"></script>
+</body>
+</html>
