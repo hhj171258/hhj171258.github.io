@@ -40,6 +40,24 @@
 }</code>
 			</pre>
 			<small>2020-05-16</small>
+			<h3>&lt;input&gt; placeholder</h3>
+			<pre>
+				<code class="css">:placeholder-shown{
+	overflow: hidden;
+	text-overflow: ellepsis;
+	white-space: nowrap
+}
+:placeholder-shown{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: [number];
+	-webkit-box-orient: vertical;
+	height: [height];
+	text-overflow: ellepsis;
+}</code>
+			</pre>
+			<p>모든 브라우저에서 사용할 수 있는게 아니니 <a href="https://caniuse.com/#search=place">caniuse</a>에서 확인한 뒤 사용하는 것이 좋다.</p>
+			<small>2020-05-21</small>
 		</div>
 	</div>
 </div>
