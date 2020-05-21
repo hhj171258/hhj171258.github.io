@@ -19,3 +19,7 @@
 - [post] web design: grid system
 - [post] web design: free font
 - [post] web design: proposal
+- [post] html, css: css reset
+	* https://meyerweb.com/eric/tools/css/reset/
+	* https://yuilibrary.com/yui/docs/cssrese
+	* http://darum.daum.net/convention/css/css_convention
