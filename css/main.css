@@ -37,7 +37,7 @@ body{overflow-y: scroll;}
 #content pre.css::before{content: "css"}
 #content pre.shell::before{content: "git"}
 #content code{position: relative;padding: 16px;border-radius: 12px;font-family: "Noto Sans KR", sans-serif;font-weight: 400;font-size: 1.4rem;}
-#content code span.javascript, #content code span.hljs-tag, #content code span.hljs-function, #content code span.css, #content code span.hljs-params, #content code span.bash{color: #abb2bf;}
+#content code span.javascript, #content code span.hljs-tag, #content code span.hljs-function, #content code span.css, #content code span.hljs-params, #content code span.bash, #content code span.hljs-selector-class{color: #abb2bf;}
 
 /* 반응형 */
 @media screen and (max-width: 1280px){
