@@ -1,6 +1,8 @@
 // JavaScript Document
 $(function(){
-	$("#header").load("/include/header.html");
+	$("#header").load("/include/header.html", function(){
+		btnToggle("#header > span > i", ".aside_wrap");
+	});
 	$("#aside").load("/include/aside.html", function asideOn(){
 		var title = $("h2").text();
 		var asideLast = $("#aside").find("li").length
@@ -15,7 +17,6 @@ $(function(){
 	});
 	hljs.initHighlighting();
 	pre();
-	btnToggle("#header span i", ".aside_wrap");
 });
 
 /* aside */
