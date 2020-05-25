@@ -13,15 +13,19 @@ $(function(){
 		}
 
 	});
+	btnToggle("#header span i", ".aside_wrap","body");
 	hljs.initHighlighting();
 	pre();
 });
 
 /* aside */
-$(document).on("click", "#header span i", function(){
-	$(".aside_wrap").toggleClass("on").delay(200);
-	$("#aside").toggleClass("on");
-})
+function btnToggle(btn, e,body){
+	$(btn).on("click", function(){
+		$(this).toggleClass("on");
+		$(e).toggle();
+	})
+	$(body).css("overflow", "hidden");
+}
 
 /* pre */
 function pre(){

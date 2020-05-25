@@ -44,7 +44,7 @@ body{overflow-y: scroll;}
     #wrap{width: 100%; min-width: 0;}
     #header{width: 100%;margin-left: -50vw;}
     #header h1{margin-left: 32px;}
-    .aside_wrap{margin-left: -50vw;width: 325px;}
+    .aside_wrap{display: none;margin-left: -50vw;width: 325px;}
     #aside{padding: 0 32px;}
     #content{margin: 61px 0 0 356px;width: calc(100% - 420px);}
 }
@@ -53,7 +53,7 @@ body{overflow-y: scroll;}
      #header{width: auto;left: 0;right:0;bottom: 0;margin-left: 0;}
     #header h1{margin-left: 0;font-size: 2.75rem;}
     #header span{display: block;margin-left: 0;padding: 0 16px;}
-    .aside_wrap.on{width: 100%; background-color: rgba(0,0,0,0.5);z-index: 30;}
+    .aside_wrap.on{overflow: hidden;display: block;width: 100%;background-color: rgba(0,0,0,0.5);z-index: 30;}
     #aside{display: none;}
     #aside.on{overflow-y: auto;display: block;position: absolute;top: 0;left: 0;margin-top: 0;width: 250px;font-size: 2rem;line-height: 3.2rem;background: #fff;z-index: 10;}
     #content{width: calc(100% - 64px);margin-left: 0;left: 0;}
