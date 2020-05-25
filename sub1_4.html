@@ -24,7 +24,7 @@
 			<pre>
 				<code class="css">.your-class{
 	overflow: hidden;
-	text-overflow: ellepsis;
+	text-overflow: ellipsis;
 	white-space: nowrap
 }</code>
 			</pre>
@@ -36,7 +36,7 @@
 	-webkit-line-clamp: [number];
 	-webkit-box-orient: vertical;
 	height: [height];
-	text-overflow: ellepsis;
+	text-overflow: ellipsis;
 }</code>
 			</pre>
 			<small>2020-05-16</small>
@@ -44,8 +44,16 @@
 			<pre>
 				<code class="css">:placeholder-shown{
 	overflow: hidden;
-	text-overflow: ellepsis;
+	text-overflow: ellipsis;
 	white-space: nowrap
+}
+::placeholder{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: [number];
+	-webkit-box-orient: vertical;
+	height: [height];
+	text-overflow: ellipsis;
 }
 :placeholder-shown{
 	overflow: hidden;
@@ -53,7 +61,7 @@
 	-webkit-line-clamp: [number];
 	-webkit-box-orient: vertical;
 	height: [height];
-	text-overflow: ellepsis;
+	text-overflow: ellipsis;
 }</code>
 			</pre>
 			<p>모든 브라우저에서 사용할 수 있는게 아니니 <a href="https://caniuse.com/#search=%3Aplaceholder-shown">caniuse</a>에서 확인한 뒤 사용하는 것이 좋다.</p>
