@@ -52,7 +52,7 @@
 &lt;/html&gt;</code>
 			</pre>
 			<p>많이 쓰이는 배너 PlugIn 중 하나.<a href="https://owlcarousel2.github.io/OwlCarousel2" target="_blank" title="새창열림">Owl Carousel</a>와 <a href="https://kenwheeler.github.io/slick" target="_blank" title="새창열림">slick</a>도 많이 쓰인다.</p>
-			<h3>Options</h3>			
+			<h3>Parameters</h3>			
 			<pre>
 				<code class="javascript">var mySwiper = new Swiper ('.swiper-container',
 	direction: horizontal | vertical, // default: horizontal
@@ -61,11 +61,15 @@
 	height: [number],
 	slidesPerView: [number] | auto, // default: 1, auto 사용시 .swiper-container에 width(또는 height)에 값을 주면 안된다.
 	loop: [boolean], // default: false
-	breakpoints: [object],
-	spaceBetween: [number] // default: 0
-})</code>
+	breakpoints: {
+		[number]:{
+			[Parameter] : [Value]
+		}
+	},
+	spaceBetween: [number] // default: 0, 공식 사이트에서는 margin 사용 지양을 권고한다.
+});</code>
 			</pre>
-			<p>Option이 다양해서 추가적인 Method는 웬만하면 필요 없을듯하다. 나머지는 <a href="https://swiperjs.com/api" target="_blank" title="새창열림">Swiper API</a>에서 볼 수 있다.</p>
+			<p>Parameter가 다양해서 추가적인 Method는 웬만하면 필요 없을듯하다. 나머지는 <a href="https://swiperjs.com/api" target="_blank" title="새창열림">Swiper API</a>에서 볼 수 있다.</p>
 			<small>2020-05-19</small>
 		</div>
 	</div>
