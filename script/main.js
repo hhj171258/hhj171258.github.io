@@ -2,6 +2,9 @@
 $(function(){
 	$("#header").load("/include/header.html", function(){
 		btnToggle("#header > span > i", ".aside_wrap");
+		if($(".aside_wrap").is(":visible")){
+			$("body").css({"overflow": "hidden"});
+		}
 	});
 	$("#aside").load("/include/aside.html", function asideOn(){
 		var title = $("h2").text();
