@@ -13,20 +13,28 @@ $(function(){
 		}
 
 	});
-	menu("#header span", ".aside_wrap", "#aside");
+	// menu("#header span", ".aside_wrap", "#aside");
 	hljs.initHighlighting();
 	pre();
 });
 
 /* aside */
-function menu(btn, e1, e2){
-	$(btn).on("click", function(){
-		$(e1).toggle();
-		$(e2).toggle();
-		$("body").css("overflow", "hidden");
-		console.log(this);
-	})
-}
+// function menu(btn, e1, e2){
+// 	$(btn).on("click", function(){
+// 		$(e1).toggle();
+// 		$(e2).toggle();
+// 		$("body").css("overflow", "hidden");
+// 		console.log(this);
+// 	});
+// }
+
+
+$("#header span").on("click", function(){
+	$(".aside_wrap").toggle();
+	$("#aside").toggle();
+	$("body").css("overflow", "hidden");
+	console.log(this);
+});
 
 /* pre */
 function pre(){
