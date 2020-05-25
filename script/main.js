@@ -13,18 +13,18 @@ $(function(){
 		}
 
 	});
-	btnToggle("#header span i", ".aside_wrap","body");
+	menu("#header span i", ".aside_wrap", "#aside");
 	hljs.initHighlighting();
 	pre();
 });
 
 /* aside */
-function btnToggle(btn, e,body){
+function menu(btn, e1, e2){
 	$(btn).on("click", function(){
-		$(this).toggleClass("on");
-		$(e).toggle();
+		$(e1).toggle();
+		$(e2).toggle();
+		$("body").css("overflow", "hidden");
 	})
-	$(body).css("overflow", "hidden");
 }
 
 /* pre */
