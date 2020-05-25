@@ -13,7 +13,7 @@ $(function(){
 		}
 
 	});
-	menu("#header span i", ".aside_wrap", "#aside");
+	menu("#header span", ".aside_wrap", "#aside");
 	hljs.initHighlighting();
 	pre();
 });
