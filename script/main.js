@@ -29,7 +29,7 @@ $(function(){
 // }
 
 
-$("#header span").on("click", function(){
+$("#header span i").on("click", function(){
 	$(".aside_wrap").toggle();
 	$("#aside").toggle();
 	$("body").css("overflow", "hidden");
