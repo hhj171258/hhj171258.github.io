@@ -24,6 +24,7 @@ function menu(btn, e1, e2){
 		$(e1).toggle();
 		$(e2).toggle();
 		$("body").css("overflow", "hidden");
+		console.log(this);
 	})
 }
 
