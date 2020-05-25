@@ -35,8 +35,10 @@ function btnToggle(btn, e, body){
 function resize(e){
 	$(window).on("resize", function(){
 		var windowWidth = $(window).outerWidth();
-		if( windowWidth > 960){
+		if(windowWidth > 960){
 			$(e).show();
+		} else{
+			$(e).hide();
 		}
 	})
 }
