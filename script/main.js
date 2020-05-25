@@ -13,28 +13,18 @@ $(function(){
 		}
 
 	});
-	// menu("#header span", ".aside_wrap", "#aside");
 	hljs.initHighlighting();
 	pre();
+	btnToggle("#header span i", ".aside_wrap")
 });
 
 /* aside */
-// function menu(btn, e1, e2){
-// 	$(btn).on("click", function(){
-// 		$(e1).toggle();
-// 		$(e2).toggle();
-// 		$("body").css("overflow", "hidden");
-// 		console.log(this);
-// 	});
-// }
-
-
-$("#header span i").on("click", function(){
-	$(".aside_wrap").toggle();
-	$("#aside").toggle();
-	$("body").css("overflow", "hidden");
-	console.log(this);
-});
+function btnToggle(btn, e){
+	$(btn).on("click", function(){
+		$(this).toggleClass("on");
+		$(e).toggle();
+	})	
+}
 
 /* pre */
 function pre(){
