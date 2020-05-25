@@ -1,10 +1,7 @@
 // JavaScript Document
 $(function(){
 	$("#header").load("/include/header.html", function(){
-		btnToggle("#header > span > i", ".aside_wrap");
-		if($(".aside_wrap").is(":visible")){
-			$("body").css({"overflow": "hidden"});
-		}
+		btnToggle("#header > span > i", ".aside_wrap", "body");
 	});
 	$("#aside").load("/include/aside.html", function asideOn(){
 		var title = $("h2").text();
@@ -23,10 +20,13 @@ $(function(){
 });
 
 /* aside */
-function btnToggle(btn, e){
+function btnToggle(btn, e, body){
 	$(btn).on("click", function(){
 		$(this).toggleClass("on");
 		$(e).toggle();
+		if($(e).is(":visible")){
+			$(body).css({"overflow": "hidden"});
+		}
 	})	
 }
 
