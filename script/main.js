@@ -15,7 +15,7 @@ $(function(){
 	});
 	hljs.initHighlighting();
 	pre();
-	btnToggle("#header span i", ".aside_wrap")
+	btnToggle("#header span i", ".aside_wrap");
 });
 
 /* aside */
