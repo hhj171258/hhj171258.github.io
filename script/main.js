@@ -15,6 +15,7 @@ $(function(){
 		}
 
 	});
+	resize(".aside_wrap");
 	hljs.initHighlighting();
 	pre();
 });
@@ -31,7 +32,11 @@ function btnToggle(btn, e, body){
 		}
 	})	
 }
-
+function resize(e){
+	$(window).on("resize", function(){
+		$(e).show();
+	})
+}
 /* pre */
 function pre(){
 	$("code").each(function(){
