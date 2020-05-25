@@ -26,6 +26,8 @@ function btnToggle(btn, e, body){
 		$(e).toggle();
 		if($(e).is(":visible")){
 			$(body).css({"overflow": "hidden"});
+		} else{
+			$(body).css({"overflow": "scroll"});
 		}
 	})	
 }
