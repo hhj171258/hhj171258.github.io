@@ -6,7 +6,10 @@
 	<header id="header">{% include header.html %}</header>
 	<div id="container">
 		<div class="aside_wrap"><aside id="aside">{% include aside.html %}</aside></div>
-		<div id="content">{{ content }}</div>
+		<div id="content">
+			<h2>{page.title}</h2>
+			{{ content }}
+	</div>
 	</div>
 </div>
 </body>
