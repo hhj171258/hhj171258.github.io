@@ -26,7 +26,7 @@ body{overflow-y: scroll;}
 #content h3 + h4{padding: 0;}
 #content p, #content strong{font-weight: 400;font-size: 1.6rem;line-height: 2.8rem;word-break: keep-all;}
 #content strong{font-weight: 500;}
-#content p a{position: relative;box-shadow: inset 0 -6px 0 #ddd; transition: all 0.3s ease;}
+#content p a{position: relative;box-shadow: inset 0 -6px 0 rgba(68, 129, 235, 0.8); transition: all 0.3s ease;}
 #content p a:hover{box-shadow: inset 0 -24px 0 #4481eb;}
 #content p a:hover{color: #fff;}
 #content blockquote{margin:10px 0;padding: 0 16px;border-left: 4px solid #e3f6fc;font-size: 1.6rem;line-height: 2.4rem;color: #aaa;}
