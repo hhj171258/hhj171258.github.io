@@ -5,6 +5,10 @@
 - https://ux.stories.pe.kr
 - https://chanspark.github.io
 - https://nykim.net
+- https://jekyllrb.com/docs/layouts
+- https://jekyllrb.com/docs/liquid/tags
+- https://jekyllrb.com/docs/liquid/filters
+
 
 ## Update Plan
 - [post] html, css: html, css 네이밍 규칙
