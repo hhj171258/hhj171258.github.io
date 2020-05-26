@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="H6VrNCQV_FasPUPBicvcr6rj160agELzS_xKc5mJQeM">
+<title>submenu | Hyunjin study</title>
+<link rel="stylesheet" href="/css/reset.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="/css/main.css?ver=1.0" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header id="header"></header>
+	<div id="container">
+		<div class="aside_wrap"><aside id="aside"></aside></div>
+		<div id="content">
+			<h2>submenu</h2>
+			<h3>mobile</h3>
+			<pre>
+				<code class="javascript">function menu(btn, depth2, depth3){
+	$(btn).on("click", function(){
+		$(btn).removeClass("on");
+		$(depth3).hide();
+		if($(this).next().is(":visible")){
+			$(depth2).stop().slideUp(200);
+		} else {
+			$(this).addClass("on");
+			$(depth2).top().slideUp(200);
+			$(this).next().stop().slideDown(200);
+		}
+	})
+}</code>
+			</pre>
+			<p>mobile에서 depth2가 1개 이상 열리지 않도록 하는 코드이다. depth3를 열고 depth2를 닫았을 때, 열어둔 depth3가 닫히게 하고 싶으면 depth3 parameter를 넣어주면 된다.</p>
+			<small>2020-05-26</small>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/script/main.js"></script>
+</body>
+</html>
