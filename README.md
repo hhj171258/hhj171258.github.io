@@ -4,6 +4,7 @@
 - http://milooy.github.io/TIL
 - https://ux.stories.pe.kr
 - https://chanspark.github.io
+- https://nykim.net
 
 ## Update Plan
 - [post] html, css: html, css 네이밍 규칙
