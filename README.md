@@ -8,7 +8,7 @@
 - https://jekyllrb.com/docs/layouts
 - https://jekyllrb.com/docs/liquid/tags
 - https://jekyllrb.com/docs/liquid/filters
-
+- https://wayhome25.github.io
 
 ## Update Plan
 - [post] html, css: html, css 네이밍 규칙
