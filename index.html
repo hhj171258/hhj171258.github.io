@@ -1,3 +1,8 @@
+---
+layout: default
+date: 2020-05-20
+title: home
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -15,9 +20,9 @@
 </head>
 <body>
 <div id="wrap">
-	<header id="header"></header>
+	<header id="header">{% include header.html %}</header>
 	<div id="container">
-		<div class="aside_wrap"><aside id="aside"></aside></div>
+		<div class="aside_wrap"><aside id="aside">{% include aside.html %}</aside></div>
 		<div id="content">
 			<h2>HyunJin Study</h2>
 			<p>개인 위키. 디자인과 코딩이 주를 이룬다.
