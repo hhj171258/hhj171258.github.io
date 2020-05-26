@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "fadeIn, fadeOut 배너"
+date: 2020-05-11
+categories: [HTML, CSS]
+---
+<h3>CSS만을 이용 fadeIn, fadeOut 배너</h3>
+<pre>
+	<code class="html">&lt;div class="wrap"&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;				
+&lt;/div&gt;</code>
+</pre>
+<pre>
+	<code class="css">div:not(.wrap){position: absolute;left: 0;top: 0;width: 100%; animation: silde 18s infinite;}
+div:nth-child(1){background-image: url("[url]"); opacity: 1;}
+div:nth-child(2){background-image: url("[url]"); animation-delay: 6s; opacity: 0;}
+div:nth-child(3){background-image: url("[url]"); animation-delay: 12s; opacity: 0;}
+
+@keyframes slide{
+	0% {opacity: 0;}
+	11.11% {opacity: 1;}
+	33.33% {opacity: 1;}
+	44.44% {opacity: 0;}
+	100% {opacity: 0;}
+}</code>
+</pre>
+<p>Jonathan Snook의 <a href="https://snook.ca/archives/html_and_css/simplest-css-slideshow" target="_blank" title="새창열림">Simplest CSS Slideshow</a>를 이용했다.</p>
+<small>2020-05-11</small>
