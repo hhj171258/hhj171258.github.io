@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "tabmenu"
+date: 2020-05-16
+categories: [JQuery]
+---
+<h3>속성값 이용</h3>
+<pre>
+	<code class="html">&lt;ul class="tabmenu"&gt;
+	&lt;li data="tab1"&gt;content&lt;/li&gt;
+	&lt;li data="tab2"&gt;content&lt;/li&gt;
+	&lt;li data="tab3"&gt;content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabcontent"&gt;
+	&lt;div id="tab1"&gt;content&lt;/div&gt;
+	&lt;div id="tab2"&gt;content&lt;/div&gt;
+	&lt;div id="tab3"&gt;content&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+function tabmenu(tab, content){
+	$(tab).first().addClass("on");
+	$(content).hide().first().show();
+	
+	$(tab).click(function(){
+		$(tab).removeClass("on");
+		$(this).addClass("on");
+
+		var tabData = $(this).attr("data");
+		$(content).hide();
+		$("#" + tabData).show();
+	})
+}
+$(function(){
+	tabmenu(".tabmenu li", ".tabcontent div");
+})
+&lt;/script&gt;</code>
+</pre>
+<p>서치해보면 대부분 이렇게 element에 속성을 넣고 값이 같으면 불러오는 방식을 이용한다.</p>
+<h3>.index() 이용</h3>
+<pre>
+	<code class="html">&lt;ul class="tabmenu"&gt;
+	&lt;li&gt;content&lt;/li&gt;
+	&lt;li&gt;content&lt;/li&gt;
+	&lt;li&gt;content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabcontent"&gt;content&lt;/div&gt;
+&lt;div class="tabcontent"&gt;content&lt;/div&gt;
+&lt;div class="tabcontent"&gt;content&lt;/div&gt;
+&lt;script&gt;
+function tabmenu(tab, content){
+	$(tab).eq(0).addClass("on");
+	$(content).hide().eq(0).show();
+	
+	$(tab).click(function(){
+		$(tab).removeClass("on");
+		$(this).addClass("on");
+
+		var contentIndex = $(this).index();
+		$(content).hide();
+		$(content).eq(contentIndex).show();
+	})
+}
+$(function(){
+	tabmenu(".tabmenu li", "tabcontent");
+})
+&lt;/script&gt;</code>
+</pre>
+<p>.index()를 이용하면 element에 속성을 넣지 않아도 될 것 같아서 만들었다. 나는 이 방법을 자주 사용한다.</p>
+<small>2020-05-16</small>

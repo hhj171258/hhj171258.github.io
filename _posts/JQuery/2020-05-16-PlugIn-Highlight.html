@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "PlugIn Highlight"
+date: 2020-05-16
+categories: [JQuery]
+---
+<h3>Settings</h3>
+			<pre>
+				<code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/defalut.min.css"/&gt;
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;pre &gt;
+		&lt;code class="language"&gt;your content&lt;/code&gt;
+	&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+			</pre>
+			<p><a href="https://highlightjs.org" target="_blank" title="새창열림">highlightjs</a>에서 스타일을 고른뒤, css 파일명 중 defalut부분을 바꾼뒤, language에 알맞는 언어 이름을 넣으면 된다.</p>
+			<small>2020-05-14</small>
+			<h3>버전 10.0.0 이상의 PlugIn이 IE에 적용되지 않는 문제</h3>			
+			<p><a href="https://cdnjs.com" target="_blank" title="새창열림">cdnjs.com</a>을 이용해 확인한 결과 10.0.0 이상의 버전의 경우 IE에 적용이 안된다. 유의비람.</p>
+			<small>2020-05-16</small>

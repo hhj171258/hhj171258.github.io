@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "GIt 기본 명령어"
+date: 2020-05-18
+categories: [Git]
+---
+<h3>Git 다운로드</h3>
+<p>우선 <a href="https://gitforwindows.org" target="_blank" title="새창열림">Git</a>을 설치한다.</p>
+<h3>초기 설정</h3>
+<pre>
+	<code class="shell">$ git config --global user.name "[your name]"
+$ git config --global user.email "[your email]"</code>
+</pre>
+<p>이때 이메일은 github 회원가입에 사용했던 이메일이다.</p>
+<h3>로컬 저장소 생성</h3>
+<pre>
+	<code class="shell">$ mkdir ~/project
+$ cd ~/project
+$ git init</code>
+</pre>
+<p>
+	mkdir은 make directory의 준말이다. ~/는 컴퓨터 최상위 단계 파일을 뜻한다.<br>
+	cd는 change directory의 준말로 해당 directory로 이동한다.<br>
+	init는 initailize의 준말로 저장소가 생성되고 .git folder가 생성된다.
+</p>
+<h3>파일 생성 및 커밋</h3>
+<pre>
+	<code class="shell">$ git status$ touch [file]
+$ git add [file]
+$ git commit -m "제목(영문 70자 이하) 공백 내용"
+$ git commit --amend -m "최근 커밋 메세지 수정"
+$ git push -f
+$ git log</code>
+</pre>
+<h3>작업 되돌리기</h3>
+<pre>
+	<code class="shell">$ git status
+$ git log
+$ git checkout [commitID]
+$ git checkout [commitID] [file]
+$ git checkout master</code>
+</pre>
+<h3>깃허브 저장소 연결 및 업로드</h3>
+<pre>
+	<code class="shell">$ git remote -v
+$ git remote add origin [url]
+$ git push origin master</code>
+</pre>
+<p>ctrl + v 는 insert를 누르면 된다.</p>
+<h3>깃허브 저장소 복제</h3>
+<pre><code class="shell">$git clone [url]</code></pre>
+<small>2020-05-18</small>

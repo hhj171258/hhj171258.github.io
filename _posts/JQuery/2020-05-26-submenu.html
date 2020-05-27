@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "submenu"
+date: 2020-05-26
+categories: [JQuery]
+---
+<h3>mobile</h3>
+<pre>
+	<code class="javascript">function menu(btn, depth2, depth3){
+	$(btn).on("click", function(){
+		$(btn).removeClass("on");
+		$(depth3).hide();
+		if($(this).next().is(":visible")){
+			$(depth2).stop().slideUp(200);
+		} else {
+			$(this).addClass("on");
+			$(depth2).top().slideUp(200);
+			$(this).next().stop().slideDown(200);
+		}
+	})
+}</code>
+</pre>
+<p>mobile에서 depth2가 1개 이상 열리지 않도록 하는 코드이다. depth3를 열고 depth2를 닫았을 때, 열어둔 depth3가 닫히게 하고 싶으면 depth3 parameter를 넣어주면 된다.</p>
+<small>2020-05-26</small>

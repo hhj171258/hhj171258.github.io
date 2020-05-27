@@ -1,28 +1,12 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="H6VrNCQV_FasPUPBicvcr6rj160agELzS_xKc5mJQeM">
-<title>PlugIn: slick Hyunjin study</title>
-<link rel="stylesheet" href="/css/reset.css?ver=1.0" type="text/css">
-<link rel="stylesheet" href="/css/main.css?ver=1.0" type="text/css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" type="text/css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-</head>
-<body>
-<div id="wrap">
-	<header id="header"></header>
-	<div id="container">
-		<div class="aside_wrap"><aside id="aside"></aside></div>
-		<div id="content">
-			<h2>PlugIn: slick</h2>
-			<h3>Settings</h3>
-			<pre>
-				<code class="html">&lt;html&gt;
+---
+layout: post
+title:  "PlugIn Slick"
+date: 2020-05-16
+categories: [JQuery]
+---
+<h3>Settings</h3>
+<pre>
+	<code class="html">&lt;html&gt;
 &lt;head&gt;
 &lt;link rel="stylesheet" type="text/css" href="slick/slick.css"/&gt; &lt;!-- 필요시 --&gt;
 &lt;link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/&gt; &lt;!-- 필요시 --&gt;
@@ -50,19 +34,19 @@
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code>
-			</pre>
-			<p>
-				많이 쓰이는 배너 PlugIn 중 하나.
-				<a href="https://owlcarousel2.github.io/OwlCarousel2" target="_blank" title="새창열림">Owl Carousel</a>와 <a href="https://swiperjs.com" target="_blank" title="새창열림">swiper</a>도 많이 쓰인다.<br>
-				왜인지 <a href="https://kenwheeler.github.io/slick" target="_blank" title="새창열림">slick</a>에서 제공하는 cdn이 제대로 작동하지 않는다. 그래서 <a href="https://cdnjs.com/libraries/slick-carousel" target="_blank" title="새창열림">cdnjs</a>에서 가져왔다. 1.9.0 에서는 slick-slide 안에 div가 하나더 생기는 오류가 있다.
-			</p>
-			<small>2020-05-14</small>
-			<h3>버전 1.9.0 이상의 PlugIn이 div를 하나 더 만드는 문제</h3>			
-			<p><a href="https://cdnjs.com" target="_blank" title="새창열림">cdnjs.com</a>을 이용해 확인한 결과 1.9.0 이상의 버전의 경우 div를 하나 더 만들어 버린다. 유의비람.</p>
-			<small>2020-05-20</small>
-			<h3>DOM</h3>			
-			<pre>
-				<code class="html">&lt;div class="your-class slick-initialized slick-slider"&gt;
+</pre>
+<p>
+	많이 쓰이는 배너 PlugIn 중 하나.
+	<a href="https://owlcarousel2.github.io/OwlCarousel2" target="_blank" title="새창열림">Owl Carousel</a>와 <a href="https://swiperjs.com" target="_blank" title="새창열림">swiper</a>도 많이 쓰인다.<br>
+	왜인지 <a href="https://kenwheeler.github.io/slick" target="_blank" title="새창열림">slick</a>에서 제공하는 cdn이 제대로 작동하지 않는다. 그래서 <a href="https://cdnjs.com/libraries/slick-carousel" target="_blank" title="새창열림">cdnjs</a>에서 가져왔다. 1.9.0 에서는 slick-slide 안에 div가 하나더 생기는 오류가 있다.
+</p>
+<small>2020-05-14</small>
+<h3>버전 1.9.0 이상의 PlugIn이 div를 하나 더 만드는 문제</h3>			
+<p><a href="https://cdnjs.com" target="_blank" title="새창열림">cdnjs.com</a>을 이용해 확인한 결과 1.9.0 이상의 버전의 경우 div를 하나 더 만들어 버린다. 유의비람.</p>
+<small>2020-05-20</small>
+<h3>DOM</h3>			
+<pre>
+	<code class="html">&lt;div class="your-class slick-initialized slick-slider"&gt;
 	&lt;div class="slick-list"&gt;
 		&lt;div class="slick-track"&gt;
 			&lt;div class="slick-slide"&gt;your content&lt;/div&gt;
@@ -71,11 +55,11 @@
 		&lt;/div&gt;	
 	&lt;/div&gt;		
 &lt;/div&gt;</code>
-			</pre>
-			<small>2020-05-16</small>
-			<h3>Options</h3>			
-			<pre>
-				<code class="javascript">$('.your-class').slick({
+</pre>
+<small>2020-05-16</small>
+<h3>Options</h3>			
+<pre>
+	<code class="javascript">$('.your-class').slick({
 	infitnite: [boolean], // default: true
 	slidesToShow: [int], // dafault: 1
 	slidesToScroll: [int], // dafault: 1
@@ -89,25 +73,25 @@
 	dots: [boolean], // default: false
 	vertical: [boolean] // default: false
 });</code>
-			</pre>
-			<small>2020-05-14</small>
-			<h3>Methods</h3>			
-			<pre>
-				<code class="javascript">$(".your-class").slick("slickCurrentSlide");
+</pre>
+<small>2020-05-14</small>
+<h3>Methods</h3>			
+<pre>
+	<code class="javascript">$(".your-class").slick("slickCurrentSlide");
 $(".your-class").slick("slickNext");
 $(".your-class").slick("slickPrev");
 $(".your-class").slick("slickPause");
 $(".your-class").slick("slickPlay");</code>
-			</pre>
-			<h3>Events</h3>			
-			<pre>
-				<code class="javascript">$('.your-class').on('beforeChange', function(){});
+</pre>
+<h3>Events</h3>			
+<pre>
+	<code class="javascript">$('.your-class').on('beforeChange', function(){});
 $('.your-class').on('afterChange', function(){});</code>
-			</pre>
-			<small>2020-05-15</small>
-			<h3>현재슬라이드 / 전체슬라이드</h3>			
-			<pre>
-				<code class="html">&lt;div class="your-class"&gt;
+</pre>
+<small>2020-05-15</small>
+<h3>현재슬라이드 / 전체슬라이드</h3>			
+<pre>
+	<code class="html">&lt;div class="your-class"&gt;
 	&lt;div&gt;your content&lt;/div&gt;
 	&lt;div&gt;your content&lt;/div&gt;
 	&lt;div&gt;your content&lt;/div&gt;
@@ -132,12 +116,12 @@ $(function(){
 	$(".next").on("click", function(){currentSlide();});
 );
 &lt;/script&gt;</code>
-			</pre>
-			<p>slick에서 현재슬라이드 / 전체슬라이드를 만들려면 slick에서 제공하는 Method 몇가지를 조합해서 코드를 짜야한다. 서치해도 안나오길래 그냥 직접 만들었다.</p>
-			<small>2020-05-16</small>
-			<h3>stop 버튼</h3>
-			<pre>
-				<code class="html">&lt;html&gt;
+</pre>
+<p>slick에서 현재슬라이드 / 전체슬라이드를 만들려면 slick에서 제공하는 Method 몇가지를 조합해서 코드를 짜야한다. 서치해도 안나오길래 그냥 직접 만들었다.</p>
+<small>2020-05-16</small>
+<h3>stop 버튼</h3>
+<pre>
+	<code class="html">&lt;html&gt;
 &lt;head&gt;
 &lt;style&gt;.off{display: none;}&lt;/style&gt;
 &lt;/head&gt;
@@ -169,11 +153,4 @@ function stopPlay(slickSlide, slickBtn, slickMethod){
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code>
-			</pre>
-		</div>
-	</div>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/script/main.js"></script>
-</body>
-</html>
+	</pre>	
