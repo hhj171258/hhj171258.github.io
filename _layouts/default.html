@@ -11,7 +11,7 @@
 		<div class="aside_wrap">
 			<aside id="aside">
 				<ul class="depth1">
-					{% assign post = site.posts | group_by: 'category' %}
+					{% assign post = site.posts | group_by: 'category' | sort: 'name' %}
 					{% for category in post %}
 					<li>
 						<span>{{ category.name }}</span>
