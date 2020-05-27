@@ -3,9 +3,29 @@
 {% include head.html %}
 <body>
 <div id="wrap">
-	<header id="header">{% include header.html %}</header>
+	<header id="header">
+		<span><i class="fas fa-bars"></i></span>
+		<h1><a href="/">{{site.title}}</a></h1>
+	</header>
 	<div id="container">
-		<div class="aside_wrap"><aside id="aside">{% include aside.html %}</aside></div>
+		<div class="aside_wrap">
+			<aside id="aside">
+				<ul class="depth1">
+					{% assign post = site.posts | group_by: 'category' %}
+					{% for category in post %}
+					<li>
+						<span>{{ category.name }}</span>
+						<ul class="depth2">
+							{% assign items = category.items %}
+							{% for item in items %}
+							<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+					{% endfor %}
+				</ul>	
+			</aside>
+		</div>
 		<div id="content">
 			<h2>{{page.title}}</h2>
 			{{ content }}
