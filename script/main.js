@@ -33,13 +33,15 @@ function btnToggle(btn, e, body){
 }
 
 function resize(e){
+	var windowWidthOri = $(window).outerWidth();
 	$(window).on("resize", function(){
 		var windowWidth = $(window).outerWidth();
-		if(windowWidth > 960){
+		if(windowWidthOri <= 960 && windowWidth > 960){
 			$(e).show();
-		} else{
+		} else if(windowWidthOri > 960 && windowWidth <= 960){
 			$(e).hide();
 		}
+		console.log(windowWidthOri + "/" + windowWidth);
 	})
 }
 
