@@ -1,26 +1,25 @@
 // JavaScript Document
 $(function(){
-	$("#header").load("/include/header.html", function(){
-		btnToggle("#header > span > i", ".aside_wrap", "body");
-	});
-	$("#aside").load("/include/aside.html", function asideOn(){
-		var title = $("h2").text();
-		var asideLast = $("#aside").find("li").length
-
-		for(var i = 0; i < asideLast; i++){
-			var aside = $("#aside").find("li").eq(i).find("a").text();
-			if(title == aside){
-				$("#aside").find("li").eq(i).addClass("on");
-			}
-		}
-
-	});
+	aside();
+	btnToggle("#header > span > i", ".aside_wrap", "body");
 	resize(".aside_wrap");
 	hljs.initHighlighting();
 	pre();
 });
 
 /* aside */
+function aside(){
+	var title = $("h2").text();
+	var asideLast = $("#aside").find("li").length
+
+	for(var i = 0; i < asideLast; i++){
+		var aside = $("#aside").find("li").eq(i).find("a").text();
+		if(title == aside){
+			$("#aside").find("li").eq(i).addClass("on");
+		}
+	}
+}	
+
 function btnToggle(btn, e, body){
 	$(btn).on("click", function(){
 		$(this).toggleClass("on");
@@ -32,6 +31,7 @@ function btnToggle(btn, e, body){
 		}
 	})	
 }
+
 function resize(e){
 	$(window).on("resize", function(){
 		var windowWidth = $(window).outerWidth();
@@ -42,6 +42,7 @@ function resize(e){
 		}
 	})
 }
+
 /* pre */
 function pre(){
 	$("code").each(function(){
