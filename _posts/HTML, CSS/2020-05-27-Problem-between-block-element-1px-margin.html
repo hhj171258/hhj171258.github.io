@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "Preblem Block 요소 사이에 생기는 1px margin"
+date: 2020-05-28
+category: "HTML, CSS"
+tag: problem
+---
+<h3>problem</h3>
+	<h4>Situation</h4>
+	<p>
+		<ul>
+			<li>&lt;meta name="viewport" content="width=720px, target-densitydpi=device-dpi"&gt;</li>
+			<li>&lt;div&gt; width를 px로 지정</li>
+			<li>&lt;div&gt; height를 지정해 주지 않아 소숫점 존재</li>
+			<li>&lt;div&gt; background image를 cover로 적용</li>
+		</ul>	
+	</p>
+	<h4>Problem</h4>
+	<p>
+		몇몇 mobile 기기에서 &lt;div&gt; 사이에 1px margin 발생<br>
+		문제가 발생하는 기기와 브라우저의 공통된 특징 확인 불가
+	</p>
+<h3>Solution</h3>
+	<h4>invalid Solution</h4>
+	<ul>
+		<li>&lt;div&gt; width를 100%로 변경</li>
+		<li>&lt;div&gt; height 지정</li>
+		<li>&lt;div&gt; background image 삭제</li>
+	</ul>
+	<h4>valid Solution</h4>
+	<ul>
+		<li>&lt;div&gt; parent background-color 지정</li>
+		<li>&lt;div&gt; margin-top: -1px</li>
+	</ul>
+<h3>Reference</h3>
+	<ul>
+		<li>https://stackoverflow.com/questions/36311124/white-line-in-mobile-website</li>
+		<li>https://stackoverflow.com/questions/51314873/extra-1px-white-line-after-footer</li>
+		<li>https://stackoverflow.com/questions/25388212/1px-margin-between-two-vertically-laid-out-divs-in-chrome-please-read-details</li>
+	</ul>
+<small>2020-05-27</small>
+
