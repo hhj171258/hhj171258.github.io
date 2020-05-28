@@ -41,7 +41,8 @@ function resize(e){
 		} else if(windowWidthOri > 960 && windowWidth <= 960){
 			$(e).hide();
 		}
-		console.log(windowWidthOri + "/" + windowWidth);
+		windowWidthOri = $(window).outerWidth();
+		console.log(windowWidthOri + "/" + windowWidth);	
 	})
 }
 
