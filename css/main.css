@@ -7,18 +7,18 @@ body{overflow-y: scroll;}
 #wrap{margin: 0 auto;overflow: hidden;min-width: 1200px;width:1200px;}
 
 #header{position: fixed;top: 0;left: 50%;margin-left: -600px;width: 1200px;height: 60px;border-bottom: 1px solid #ddd;background-color: #fff;z-index: 10;}
-#header h1{float: left; font-weight: 500;font-size: 2.2rem;line-height: 60px;}
+#header h1{float: left;margin-left: 32px;font-weight: 500;font-size: 2.2rem;line-height: 60px;}
 #header span{display: none; float: left; margin-left: 32px; font-size: 2.4rem; line-height: 60px; cursor: pointer;}
 
-.aside_wrap{position: fixed; top: 61px;left: 50%;margin-left: -600px;height: 100%;width: 261px; z-index: 30;}
-#aside{position: absolute; overflow-y: auto;width: 260px;height: calc(100vh - 61px);border-right: 1px solid #ddd;font-weight: 500;font-size: 1.6rem;line-height: 2.4rem; background-color: #fff;}
+.aside_wrap{position: fixed;top: 61px;left: 50%;margin-left: -600px;height: 100%;width: 325px;z-index: 30;}
+#aside{position: absolute;overflow-y: auto;padding: 0 32px;width: 260px;height: calc(100vh - 61px);border-right: 1px solid #ddd;font-weight: 500;font-size: 1.6rem;line-height: 2.4rem;background-color: #fff;}
 #aside .depth1 > li{margin: 16px 0;}
 #aside .depth2{margin-left: 16px; font-weight: 400;}
 #aside .depth2 a{color: #666;}
 #aside .depth2 a:hover, #aside .on a{color: #4481eb;}
 #aside .depth3{margin-left: 24px; font-size: 1.4rem;}
 
-#content{margin: 61px 0 0 301px;padding: 32px;width: 835px;}
+#content{margin: 61px 0 0 326px;padding: 32px;width: 815px;}
 #content h2{font-weight: 500;font-size: 3.2rem;text-align: center;}
 #content h2::after{content:""; display: block; margin: 16px auto 20px; width: 5px; height: 30px; background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); ; transform: rotate(45deg);}
 #content h3{margin: 24px 0 8px;padding-bottom: 8px;border-bottom: 1px solid #ddd;font-weight: 500;font-size: 2.2rem;}
@@ -45,10 +45,8 @@ body{overflow-y: scroll;}
 @media screen and (max-width: 1280px){
     #wrap{width: 100%; min-width: 0;}
     #header{width: 100%;margin-left: -50vw;}
-    #header h1{margin-left: 32px;}
     .aside_wrap{margin-left: -50vw;width: 325px;}
-    #aside{padding: 0 32px;}
-    #content{margin: 61px 0 0 356px;width: calc(100% - 420px);}
+    #content{margin: 61px 0 0 326px;width: calc(100% - 390px);}
 }
 @media screen and (max-width: 960px){
     html{font-size: 9px;}
