@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "scrollTop을 이용해 transition 작동시키기"
+date: 2020-05-27
+category: "JQuery"
+---
+<h3>Code</h3>
+<pre>
+	<code class="javascript">function scrollTransition(wrap, item){
+	var wrapPosition = $(wrap).position().top;
+	$(document).on("scroll", function(){
+		$(item).each(function(){
+			var scrollTop = $(document).scrollTop();
+			var windowHeight = $(window).height();
+			var itemPosition = $(this).position().top;
+			if(scrollTop >= wrapPosition + itemPosition - windowHeight*0.7 && scrollTop < wrapPosition + itemPosition){
+				$(this).addClass("on");
+			} else{
+				$(this).removeClass("on");
+			}
+		})
+	})
+}</code>
+</pre>
+<p>element가 회면의 위에서 부터 70% 위치에 올때 transition이 작동하는 코드이다.</p>
