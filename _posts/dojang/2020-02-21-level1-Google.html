@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "level1 구글 입사 문제 중에서"
+date: 2020-02-21
+category: "코딩도장"
+---
+<h3>Problem</h3>
+<p>
+	1부터 10,000까지 8이라는 숫자가 총 몇번 나오는가?<br>
+	8이 포함되어 있는 숫자의 갯수를 카운팅 하는 것이 아니라 8이라는 숫자를 모두 카운팅 해야 한다.<br>
+	(※ 예를들어 8808은 3, 8888은 4로 카운팅 해야 함)
+</p>
+<h3>solution</h3>
+<pre>
+	<code class="javascript">function solution(){
+	var answer = 0;
+	for(var i = 0; i <= 10000; i++){
+		var iStr = String(i);
+		for(var j = 0; j < iStr.length; j++){
+			if(iStr.substring(j, j+1) == 8){
+				answer++;
+			}
+		}
+	}
+	return answer;
+}
+console.log(solution());</code>
+	</pre>
+<h3>Reference</h3>
+<a href="http://codingdojang.com/scode/393" target="_blank" title="새창열림">http://codingdojang.com/scode/393</a>
+<small>2020-02-21</small>

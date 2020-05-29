@@ -1,0 +1,44 @@
+---
+layout: post
+title:  "level1 Special sort"
+date: 2020-02-21
+category: "코딩도장"
+---
+<h3>Problem</h3>
+<p>
+	n개의 정수를 가진 배열이 있다. 이 배열은 양의정수와 음의 정수를 모두 가지고 있다. 이제 당신은 이 배열을 좀 특별한 방법으로 정렬해야 한다.<br>
+	정렬이 되고 난 후, 음의 정수는 앞쪽에 양의정수는 뒷쪽에 있어야 한다. 또한 양의정수와 음의정수의 순서에는 변함이 없어야 한다.
+</p>
+<h3>solution</h3>
+<pre>
+	<code class="javascript">function solution(arr){
+	var answer = [];
+
+	if(arr.indexOf(",") == -1){
+		return answer = "쉼표(,)로 구분하여 입력해주세요.";
+	} else{
+		var arrNum = arr.split(",");
+		var negativeNum = [];
+		var positiveNum = [];
+
+		for(var i = 0; i < arrNum.length; i++){
+			if( arrNum[i] < 0){
+				negativeNum.push(arrNum[i]);
+			} else {
+				positiveNum.push(arrNum[i]);
+			}
+		}
+		negativeNum.sort();
+		negativeNum.reverse();
+		positiveNum.sort();
+	}
+	
+	answer = negativeNum.concat(positiveNum)
+	return answer;
+}
+
+document.write(solution("1,-5,-9,0,8,7,-5"));</code>
+		</pre>
+<h3>Reference</h3>
+<a href="http://codingdojang.com/scode/414" target="_blank" title="새창열림">http://codingdojang.com/scode/414</a>
+<small>2020-02-21</small>
