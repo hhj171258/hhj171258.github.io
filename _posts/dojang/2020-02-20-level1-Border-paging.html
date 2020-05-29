@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "level1 게시판 페이징"
+date: 2020-02-20
+category: "코딩도장"
+---
+<h3>Problem</h3>
+<p>
+	A씨는 게시판 프로그램을 작성하고 있다.<br>
+	A씨는 게시물의 총 건수와 한 페이지에 보여줄 게시물수를 입력으로 주었을 때 총 페이지수를 리턴하는 프로그램이 필요하다고 한다. A씨가 필요한 프로그램을 작성하시오<br>
+
+	입력 : 총건수(m), 한페이지에 보여줄 게시물수(n) (단 n은 1보다 크거나 같다. n >= 1)<br>
+	출력 : 총페이지수
+</p>
+<h3>solution</h3>
+<pre>
+	<code class="javascript">function paging(m, n){
+	var m, n, answer;
+	var mNum = Number(m);
+	var nNum = Number(n);
+
+	if(nNum<=0){
+		answer = "한페이지에 1개 이상의 게시물을 보여줘야 합니다.";
+	} else{
+		if(nNum >= mNum){
+			answer = 1;
+		} else{
+			answer = (mNum - ( mNum % nNum))/nNum + 1;
+		}
+	}
+	
+	return answer;
+}</code>
+		</pre>
+<h3>Reference</h3>
+<a href="http://codingdojang.com/scode/406" target="_blank" title="새창열림">http://codingdojang.com/scode/406</a>
+<small>2020-02-20</small>
