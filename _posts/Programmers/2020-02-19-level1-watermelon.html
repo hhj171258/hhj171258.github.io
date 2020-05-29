@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "level1 수박수박수"
+date: 2020-02-19
+category: "프로그래머스"
+---
+<h3>Problem</h3>
+<p>
+	정수 num이 짝수일 경우 Even을 반환하고 홀수인 경우 Odd를 반환하는 함수, solution을 완성해주세요.<br>
+	제한 조건: num은 int 범위의 정수, 0은 짝수
+</p>
+<h3>solution</h3>
+<pre>
+	<code class="javascript">var n =prompt("길이를 입력해 주세요.", "0");
+	var c=1;
+	var answer="";
+
+	while(c <= Number(n) && Number(n)<=10000){
+  	    if( c % 2 == 1){
+   	        answer += "수";
+   	        c++;
+	    } else{
+    	    answer += "박";
+    	    c++;
+	    }
+	    
+	}
+
+if(n <= 10000){
+	document.write(answer);
+}else{
+	document.write("10,000이하의 수를 입력해 주세요.");
+}</code>
+</pre>
+<h3>Reference</h3>
+<small>2020-02-19</small>
