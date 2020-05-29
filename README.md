@@ -3,11 +3,17 @@
 - https://vue-nuxt.gitbook.io/nuxt
 - http://milooy.github.io/TIL
 - https://ux.stories.pe.kr
+- https://www.holaxprogramming.com
 - https://chanspark.github.io
+- https://chanspark.github.io/portfolio/index.html
 - https://nykim.net
 - https://jekyllrb.com
 - https://wayhome25.github.io
 - https://uipac.com/451
+- https://mulder21c.github.io
+- https://webclub.tistory.com
+- https://taegon.kim/archives/9658
+
 
 ## Update Plan
 - [post] html, css: html, css 네이밍 규칙
