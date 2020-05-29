@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "level1 짝수와 홀수"
+date: 2020-02-19
+category: "프로그래머스"
+---
+<h3>Problem</h3>
+<p>
+	정수 num이 짝수일 경우 Even을 반환하고 홀수인 경우 Odd를 반환하는 함수, solution을 완성해주세요.<br>
+	제한 조건: num은 int 범위의 정수, 0은 짝수
+</p>
+<h3>solution</h3>
+<pre>
+	<code class="javascript">function solution(){
+	var num = Number(prompt("정수 하나를 입력해주세요.", "0"));
+
+	if(num % 2 == 0){
+		document.write( num + "는(은) Even 입니다.");
+	} else if( num % 2 == 1 ){
+		document.write( num + "는(은) Odd 입니다.");
+	} else {
+		document.write("정수를 입력해주세요.");
+	}
+}	
+
+solution();</code>
+</pre>
+<h3>Reference</h3>
+<small>2020-02-19</small>
