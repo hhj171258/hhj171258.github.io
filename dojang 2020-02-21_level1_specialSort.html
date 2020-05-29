@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>구글 전화 면접 문제</title>
+	<script type="text/javascript">
+		/*n개의 정수를 가진 배열이 있다. 이 배열은 양의정수와 음의 정수를 모두 가지고 있다. 이제 당신은 이 배열을 좀 특별한 방법으로 정렬해야 한다.
+
+		정렬이 되고 난 후, 음의 정수는 앞쪽에 양의정수는 뒷쪽에 있어야 한다. 또한 양의정수와 음의정수의 순서에는 변함이 없어야 한다.*/
+
+		function solution(arr){
+			var answer = [];
+
+			if(arr.indexOf(",") == -1){
+				return answer = "쉼표(,)로 구분하여 입력해주세요.";
+			} else{
+				var arrNum = arr.split(",");
+				var negativeNum = [];
+				var positiveNum = [];
+
+				for(var i = 0; i < arrNum.length; i++){
+					if( arrNum[i] < 0){
+						negativeNum.push(arrNum[i]);
+					} else {
+						positiveNum.push(arrNum[i]);
+					}
+				}
+				negativeNum.sort();
+				negativeNum.reverse();
+				positiveNum.sort();
+			}
+			
+			answer = negativeNum.concat(positiveNum)
+			
+			/*for(var j = 0; j < negativeNum.length; j++){
+				answer.push(negativeNum[j]);
+			}
+			console.log(answer);
+			for(var k = 0; k < positiveNum.length; k++){
+				answer.push(positiveNum[k]);
+			}*/
+			
+			return answer;
+		}
+
+		document.write(solution("1,-5,-9,0,8,7,-5"));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

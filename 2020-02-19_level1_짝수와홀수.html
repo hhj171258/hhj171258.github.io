@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*정수 num이 짝수일 경우 Even을 반환하고 홀수인 경우 Odd를 반환하는 함수, solution을 완성해주세요.
+
+		제한 조건
+		num은 int 범위의 정수입니다.
+		0은 짝수입니다.*/
+
+		function solution(){
+			var num = Number(prompt("정수 하나를 입력해주세요.", "0"));
+
+			if(num % 2 == 0){
+				document.write( num + "는(은) Even 입니다.");
+			} else if( num % 2 == 1 ){
+				document.write( num + "는(은) Odd 입니다.");
+			} else {
+				document.write("정수를 입력해주세요.");
+			}
+		}	
+
+		solution();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

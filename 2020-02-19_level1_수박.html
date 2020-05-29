@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var n =prompt("길이를 입력해 주세요.", "0");
+    	var c=1;
+    	var answer="";
+
+    	while(c <= Number(n) && Number(n)<=10000){
+	  	    if( c % 2 == 1){
+	   	        answer += "수";
+	   	        c++;
+		    } else{
+	    	    answer += "박";
+	    	    c++;
+		    }
+		    
+		}
+	
+	if(n <= 10000){
+		document.write(answer);
+	}else{
+		document.write("10,000이하의 수를 입력해 주세요.");
+	}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
