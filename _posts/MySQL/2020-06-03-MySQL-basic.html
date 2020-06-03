@@ -6,11 +6,50 @@ category: "MySQL"
 ---
 <h3>Directory</h3>
 <p><code>\xampp\htdocs</code>에 올린후 <code>http://localhost/[file]</code>애서 확인하면 된다.</p>
-<h3>php code</h3>
+<h3>PHP code</h3>
 <pre>
-	<code class="php">&lt;? php 
+	<code class="php">&lt;? php
+	ini_set("display_errors", 0); 
 	$[variable]; // comment 
 	echo"&lt;?=$[variable]?>&gt;"; /* comment */
 ?&gt;</code>
+</pre>
+<h3>MySQL 접속</h3>
+<pre>
+	<code class="php">&lt;? php 
+	$host ='localhost';
+	$user = 'root';
+	$pass = '[password]]';
+	// mariaDB
+	$db = mysqli_connect($host, $use, $pass);
+	mysqli_select_db($db, '[database]');
+	// mySQL
+	$db = mysql_connect($host, $use, $pass);
+	mysql_select_db('[database]', $db);
+?&gt;</code>
+</pre>
+<h3>MySQL 접속 코드 include</h3>
+<pre>
+	<code class="php">&lt;? php include "include/head.inc" ?&gt;</code>
+</pre>
+<h3>MySQL table 조회</h3>
+<pre>
+	<code class="php">$sql = "select * from [table]]";
+	$result = mysqli_query($db, $sql);
+	$fields = mysqli_num_fields($result);
+		echo "&lt;table&gt;
+		&lt;tr&gt; 
+		&lt;th&gt;[fiedl1]&lt;/th&gt;
+		&lt;th&gt;[fiedl2]&lt;/th&gt;
+		&lt;/tr&gt;";
+ 	while($dat = mysqli_fetch_array($result))
+ 	{
+ 		echo "&lt;tr&gt;";
+ 		for($i = 0; $i < $fields; $i++){
+ 			$td = $dat[$i];
+ 			echo "&lt;td&gt;$td&lt;/td&gt;";
+ 		}	
+ 		echo "&lt;/tr&gt;";
+ 	}</code>
 </pre>
 <small>2020-06-03</small>
