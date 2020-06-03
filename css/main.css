@@ -34,11 +34,12 @@ body{overflow-y: scroll;}
 
 #content pre{position: relative;}
 #content pre::before{position: absolute;top: 16px;right: 16px;display: block; font-family: "Noto Sans KR", sans-serif;font-weight: 400;font-size: 1.4rem; line-height: 3.2rem; color: #fff;text-align: center;z-index: 10;}
-#content pre.html::before{content: "html"}
-#content pre.javascript::before{content: "javascript"}
-#content pre.css::before{content: "css"}
-#content pre.shell::before{content: "git"}
-#content pre.dos::before{content: "dos"}
+#content pre.html::before{content: "html";}
+#content pre.javascript::before{content: "javascript";}
+#content pre.css::before{content: "css";}
+#content pre.shell::before{content: "git";}
+#content pre.dos::before{content: "dos";}
+#content pre.php::before{content: "php";}
 #content pre code.hljs{position: relative;padding: 16px;border-radius: 12px;font-family: "Noto Sans KR", sans-serif;font-weight: 400;font-size: 1.4rem;}
 #content pre code span.javascript, #content code span.hljs-tag, #content code span.hljs-function, #content code span.css, #content code span.hljs-params, #content code span.bash, #content code span.hljs-selector-class{color: #abb2bf;}
 
