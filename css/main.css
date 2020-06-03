@@ -24,7 +24,7 @@ body{overflow-y: scroll;}
 #content h3{margin: 24px 0 8px;padding-bottom: 8px;border-bottom: 1px solid #ddd;font-weight: 500;font-size: 2.2rem;}
 #content h4{padding-top: 18px; font-weight: 500; font-size: 1.8rem;}
 #content h3 + h4{padding: 0;}
-#content p, #content strong, #content ul, #content a{font-weight: 400;font-size: 1.6rem;line-height: 2.8rem;}
+#content p, #content strong, #content ul, #content a, #content code{font-weight: 400;font-size: 1.6rem;line-height: 2.8rem;}
 #content li::before{content:"";display: block;float: left;margin: 13px 8px;width: 2px;height: 2px;background-color: #000;}
 #content a{position: relative;box-shadow: inset 0 -6px 0 #ddd; transition: all 0.3s ease;}
 #content a:hover{box-shadow: inset 0 -24px 0 #4481eb;}
@@ -39,8 +39,10 @@ body{overflow-y: scroll;}
 #content pre.css::before{content: "css"}
 #content pre.shell::before{content: "git"}
 #content pre.dos::before{content: "dos"}
-#content code{position: relative;padding: 16px;border-radius: 12px;font-family: "Noto Sans KR", sans-serif;font-weight: 400;font-size: 1.4rem;}
-#content code span.javascript, #content code span.hljs-tag, #content code span.hljs-function, #content code span.css, #content code span.hljs-params, #content code span.bash, #content code span.hljs-selector-class{color: #abb2bf;}
+#content pre code.hljs{position: relative;padding: 16px;border-radius: 12px;font-family: "Noto Sans KR", sans-serif;font-weight: 400;font-size: 1.4rem;}
+#content pre code span.javascript, #content code span.hljs-tag, #content code span.hljs-function, #content code span.css, #content code span.hljs-params, #content code span.bash, #content code span.hljs-selector-class{color: #abb2bf;}
+
+code:not(.hljs){margin: 0 4px;padding: 2px 5px;border: 1px solid #04befe;border-radius: 0.8rem;font-family: "Noto Sans KR";font-size: 1.4rem !important;color: #4481eb;background-color:  #e3f6fc;}
 
 /* 반응형 */
 @media screen and (max-width: 1280px){
