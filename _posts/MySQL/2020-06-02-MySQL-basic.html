@@ -6,7 +6,7 @@ category: "MySQL"
 ---
 <h3>Creat table</h3>
 <pre>
-	<code class="DOS">create table [table]
+	<code class="dos">create table [table]
 (
 	[column1] [type] not null,
 	[column2] [type],
@@ -16,12 +16,12 @@ category: "MySQL"
 </pre>
 <h3>Drop table</h3>
 <pre>
-	<code class="DOS">drop table (if exists) [table];</code>
+	<code class="dos">drop table (if exists) [table];</code>
 </pre>
 <h3>Select from</h3>
 <pre>
-	<code class="DOS">Select * from [table]
-where [column1] = '[value1]' and(or) [column2] = '[value2]'
+	<code class="dos">Select * from [table]
+where [column1] = '[value1]' and(or) [column2] like '[value2]%'
 group by [column1]
 order by [column1] asc, [column2], desc
 limit ([number]), [number];
@@ -33,23 +33,23 @@ Select max([column1]) from [table];</code>
 </pre>
 <h3>Insert into</h3>
 <pre>
-	<code class="DOS">insert into [table] (([column1], [column2])) values('[values1]','[values2]');</code>
+	<code class="dos">insert into [table] (([column1], [column2])) values('[values1]','[values2]');</code>
 </pre>
 <h3>Update</h3>
 <pre>
-	<code class="DOS">update [table]
+	<code class="dos">update [table]
 set [column1] = '[value1]',
 	[column2] = '[value2]'
 where [colum3] = '[value3]';</code>
 </pre>
 <h3>Delete from</h3>
 <pre>
-	<code class="DOS">delete from [table]
+	<code class="dos">delete from [table]
 where [column1] = '[value1]';</code>
 </pre>
 <h3>Alter table</h3>
 <pre>
-	<code class="DOS">alter table [table]
+	<code class="dos">alter table [table]
 	modify [column] [type];
 alter table [table]
 	change [column] [columnNew] [type];

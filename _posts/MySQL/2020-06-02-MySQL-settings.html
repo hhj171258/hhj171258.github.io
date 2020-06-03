@@ -14,7 +14,7 @@ category: "MySQL"
 <h3>MySQL 실행하기</h3>
 <p>다음은 xampp control pannel로 Apache와 MySQL을 실행한 뒤 입력한다.</p>
 <pre>
-	<code class="DOS">cd \xampp\mysql\bin
+	<code class="dos">cd \xampp\mysql\bin
 mysql -u root (-p[password]) ([database]);
 show databases;
 create database [database]; 
@@ -30,18 +30,18 @@ desc [table];</code>
 </pre>
 <h3>MySQL 종료하기</h3>
 <pre>
-	<code class="DOS">quit
+	<code class="dos">quit
 exit</code>
 </pre>
 <h3>MySQL 비밀번호 설정</h3>
 <pre>
-	<code class="DOS">use mysql;
+	<code class="dos">use mysql;
 set password = password('[password]');
 mysql -u root -p[password]</code>
 </pre>
 <h3>MySQL 비밀번호 변경</h3>
 <pre>
-	<code class="DOS">mysql.exe -skip-grant
+	<code class="dos">mysql.exe -skip-grant
 mysql		
 use mysql;
 UPDATE user set password = PASSWORD('[password]') where user = 'root';
