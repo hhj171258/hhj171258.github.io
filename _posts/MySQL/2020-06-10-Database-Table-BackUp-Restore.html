@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "BackUp, Restore"
+date: 2020-06-10
+category: "MySQL"
+---
+<h3>Database, Table BackUp</h3>
+<pre>
+	<code class="dos">cd \xampp\mysql\bin
+mysqldump -u root -p[password] [database] ([table]) > [file]</code>
+</pre>
+<h3>Database, Table Restore</h3>
+<pre>
+	<code class="dos">cd \xampp\mysql\bin
+mysql -u root -p[password] [database] < [file.txt]</code>
+</pre>
+<h3>txt -> table load</h3>
+<pre>
+	<code class="dos">cd C:/[folder]/[file.txt]
+load data infile 'C:/[folder]/[file.txt]' into table [table] field terminated by '[구분자]'
+</code>
+</pre>
+<h3>table -> txt Download</h3>
+<pre>
+	<code class="dos">cd \xampp\mysql\bin
+mysql -u root (-p[password]) ([database]);
+select * into outfile 'C:/[folder]/[file.txt]' fields terminated by '#' from supplier; 
+</code>
+</pre>
+<small>2020-06-10</small>
